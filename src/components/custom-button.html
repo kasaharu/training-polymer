@@ -1,0 +1,21 @@
+<dom-module id="custom-button">
+  <template>
+    <style>
+      :host {
+        display: inline-block;
+      }
+    </style>
+
+    <button>BUTTON</button>
+  </template>
+</dom-module>
+
+<script>
+  class CustomButton extends Polymer.Element {
+    static get is() { return 'custom-button'; }
+    constructor() {
+      super();
+    }
+  }
+  customElements.define(CustomButton.is, CustomButton);
+</script>
