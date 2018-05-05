@@ -6,13 +6,22 @@
       }
     </style>
 
-    <button>BUTTON</button>
+    <button>[[value]]</button>
   </template>
 </dom-module>
 
 <script>
   class CustomButton extends Polymer.Element {
     static get is() { return 'custom-button'; }
+
+    static get properties() {
+      return {
+        value: {
+          type: String,
+        },
+      }
+    }
+
     constructor() {
       super();
     }
